@@ -1,54 +1,71 @@
-<header>
+Araç Kiralama Sistemi - Proje Dokümantasyonu
+1. Proje Analizi Amaç:
+Basit ve kullanıcı dostu bir arayüz ile müşterilere araç kiralama hizmeti sunmak.
+Kullanıcı Türleri:
+- Kullanıcı (Personel): Sisteme araç ve müşteri ekleyebilir, araç kiralayabilir ve mevcut kiralamaları görüntüleyebilir.
+ Temel İşlevler:
+- Araç ekleme
+- Müşteri ekleme
+- Araç kiralama
+- Kiralama kayıtlarını görüntüleme
+2. Sınıf Tanımları
+ Arac Sınıfı
+- Özellikler:
+  - arac_id: (str) Araç kimliği
+  - model: (str) Araç modeli
+  - kiralama_durumu: (bool) Kiralanmış mı?
+- Metotlar:
+  - arac_durumu_guncelle(durum: bool): Kiralama durumunu günceller.
+ Musteri Sınıfı
+- Özellikler:
+  - musteri_id: (str) Müşteri kimliği
+  - ad: (str) Ad
+  - soyad: (str) Soyad
+ Kiralama Sınıfı
+- Özellikler:
+  - kiralamalar: (liste) Kiralama kayıtlarını tutar.
+- Metotlar:
+  - kiralama_yap(musteri, arac): Araç kiralama işlemini yapar.
+  - kiralama_bilgisi(): Tüm kiralama kayıtlarını listeler.
+3. Veri Yapıları
+Veri Türü	Kullanılan Yapı	Açıklama
+Araçlar	list[Arac]	Tüm araçları tutar.
+Müşteriler	list[Musteri]	Tüm müşterileri tutar.
+Kiralamalar	list[dict]	Müşteri ve araç eşleşmeleri sözlük olarak saklanır.
+4. Arayüz Tasarımı (GUI)
+Arayüzdeki Bileşenler:
+- Araç Ekleme Alanı: Araç ID ve model giriş kutuları
+- Müşteri Ekleme Alanı: Müşteri ID, ad ve soyad giriş kutuları
+- Listbox'lar: Mevcut araç ve müşteri listesi
+- Kiralama Butonu: Seçili müşteri ve araç ile kiralama işlemi
+- Kiralama Bilgileri: Mevcut kiralamaları gösteren metin alanı
+Kullanılan Teknoloji:
+- tkinter kütüphanesi ile masaüstü GUI
+5. Kodlama
+Kodlama adımında yukarıda verdiğiniz Python kodu başarıyla sınıf tanımlarını, veri yapılarını ve GUI öğelerini kapsamaktadır.
+6. Sistem Testi
+Sistemin işlevlerini test etmek için:
+- Araç eklenip listede görüntüleniyor mu?
+- Müşteri eklenip listede görüntüleniyor mu?
+- Müşteri ve araç seçilerek kiralama yapılabiliyor mu?
+- Kiralanmış araç tekrar kiralanabiliyor mu? (Olmamalı)
+- Kiralama bilgileri doğru şekilde listeleniyor mu?
+7. Kullanım Kılavuzu
+Adım Adım Kullanım:
+1. Araç Ekleme
+   - Araç ID ve modeli girin, “Araç Ekle” butonuna tıklayın.
+2. Müşteri Ekleme
+   - Müşteri ID, ad ve soyad girin, “Müşteri Ekle” butonuna tıklayın.
+3. Araç Kiralama
+   - Listelerden müşteri ve araç seçin.
+   - “Araç Kirala” butonuna basın.
+   - Araç müsait değilse uyarı mesajı gösterilir.
+4. Kiralama Bilgilerini Görüntüleme
+   - “Kiralama Bilgileri” butonuna tıklayarak yapılan kiralamaları görün.
+8. Geliştirme Önerileri
+İleri seviye için şu geliştirmeler yapılabilir:
+- Kiralama iptali özelliği
+- Tarih bilgisi (kiralama tarihi, iade tarihi)
+- Verilerin dosyaya (JSON/DB) kaydedilmesi
+- Gelişmiş arama ve filtreleme
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
-
-# GitHub Pages
-
-_Create a site or blog from your GitHub repositories with GitHub Pages._
-
-</header>
-
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
-
-## Step 1: Enable GitHub Pages
-
-_Welcome to GitHub Pages and Jekyll :tada:!_
-
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
-
-### :keyboard: Activity: Enable GitHub Pages
-
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
