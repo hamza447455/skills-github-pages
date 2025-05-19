@@ -1,3 +1,8 @@
+![Ekran görüntüsü 2025-05-19 204822](https://github.com/user-attachments/assets/64670d4c-6980-4b8b-ae8e-856247002b0e)
+
+
+![Ekran görüntüsü 2025-05-19 204900](https://github.com/user-attachments/assets/cd6504a7-8bcd-402b-aab2-65d7af2045e3)
+
 Araç Kiralama Sistemi - Proje Dokümantasyonu
 1. Proje Analizi Amaç:
 Basit ve kullanıcı dostu bir arayüz ile müşterilere araç kiralama hizmeti sunmak.
@@ -70,24 +75,36 @@ Adım Adım Kullanım:
 - Gelişmiş arama ve filtreleme
 
 Proje Dokümantasyonu – Proje 2: Hastane Randevu Sistemi
+
 1. Temel Tanım
 Bu proje, hastaların uygun doktorlardan randevu almasını ve bu randevuları yönetmesini sağlayan bir sistemdir. Python programlama dili ve tkinter arayüz kütüphanesi kullanılarak geliştirilecektir.
 2. Temel Sınıfların Tanımlanması
 Hasta Sınıfı: Hasta bilgilerini ve geçmiş randevularını tutar.
 - Özellikler: isim (str), tc (str), randevu_gecmisi (list)
 Doktor Sınıfı: Doktor bilgilerini ve uygunluk durumunu saklar.
-- Özellikler: isim (str), uzmanlik (str), musaitlik (list)![Ekran görüntüsü 2025-05-19 204206](https://github.com/user-attachments/assets/999564c2-c785-4180-b944-043cb112e875)
+
+![Ekran görüntüsü 2025-05-19 204037](https://github.com/user-attachments/assets/acc07ae7-ba2a-449a-8d2e-116b347b1f41)
 
 Randevu Sınıfı: Bir hasta ile doktor arasında oluşturulan randevuyu temsil eder.
 - Özellikler: tarih (str), doktor (Doktor), hasta (Hasta)
 3. Randevu Sistemi Fonksiyonları
 randevu_al(hasta, doktor, tarih): Hasta için doktorun uygunluk durumuna göre randevu oluşturur.
 randevu_iptal(hasta, randevu): Mevcut bir randevuyu iptal eder ve doktorun müsaitlik listesini günceller.
-4. Veri Yapıları
+
+ ![Ekran görüntüsü 2025-05-19 204113](https://github.com/user-attachments/assets/75d3e7e4-0ea6-47cc-9dc7-385866faf9fa)
+
 - Liste (list): Hasta ve doktor nesnelerini saklamak için.
+4. Veri Yapıları
+  
 - Sözlük (dict): TC ile hasta erişimi sağlamak için.
 - JSON: Verilerin dosyada kalıcı olarak saklanması.
 - datetime/str: Tarih ve saat bilgileri için.
+
+![Ekran görüntüsü 2025-05-19 204127](https://github.com/user-attachments/assets/0156b611-3a5d-40e8-ac7a-553f0934a036)
+
+![Ekran görüntüsü 2025-05-19 204206](https://github.com/user-attachments/assets/ca8614cc-a59a-40b7-a242-35ab3dd28443)
+
+
 5. Kullanıcı Arayüzü (GUI)
 Araçlar: tkinter, customtkinter
 Tema: Mavi tonlar, tıbbi ikonlar (steteskop, iğne)
