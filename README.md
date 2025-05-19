@@ -76,7 +76,8 @@ Bu proje, hastaların uygun doktorlardan randevu almasını ve bu randevuları y
 Hasta Sınıfı: Hasta bilgilerini ve geçmiş randevularını tutar.
 - Özellikler: isim (str), tc (str), randevu_gecmisi (list)
 Doktor Sınıfı: Doktor bilgilerini ve uygunluk durumunu saklar.
-- Özellikler: isim (str), uzmanlik (str), musaitlik (list)
+- Özellikler: isim (str), uzmanlik (str), musaitlik (list)![Ekran görüntüsü 2025-05-19 204206](https://github.com/user-attachments/assets/999564c2-c785-4180-b944-043cb112e875)
+
 Randevu Sınıfı: Bir hasta ile doktor arasında oluşturulan randevuyu temsil eder.
 - Özellikler: tarih (str), doktor (Doktor), hasta (Hasta)
 3. Randevu Sistemi Fonksiyonları
